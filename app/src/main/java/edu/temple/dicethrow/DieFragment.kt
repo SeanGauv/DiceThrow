@@ -47,4 +47,14 @@ class DieFragment : Fragment() {
         dieTextView.text = (Random.nextInt(dieSides) + 1).toString()
     }
 
+    companion object{
+        fun newInstance(sides: Int) : DieFragment{
+            val fragment = DieFragment()
+            val bundle = Bundle()
+            bundle.putInt(DIESIDE, sides)
+            fragment.arguments = bundle
+
+            return fragment
+        }
+    }
 }
