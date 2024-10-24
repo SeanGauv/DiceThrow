@@ -9,16 +9,10 @@ class MainActivity : AppCompatActivity(), ButtonFragment.ButtonInterface {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        val fragment = DieFragment.newInstance(100)
-
-        if (supportFragmentManager.findFragmentById(R.id.dieContainer) !is DieFragment)
-            supportFragmentManager.beginTransaction().add(R.id.dieContainer).commit()
-
-
     }
 
     override fun buttonClicked() {
-
+        (supportFragmentManager
+            .findFragmentById(R.id.fragmentContainerView) as DieFragment).throwDie()
     }
 }

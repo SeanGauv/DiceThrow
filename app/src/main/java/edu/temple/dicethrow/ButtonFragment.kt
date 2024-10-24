@@ -1,5 +1,6 @@
 package edu.temple.dicethrow
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,7 +16,7 @@ class ButtonFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_button, container, false).apply {
-            findViewById<Button>(R.id.button).setOnClickListener {
+            findViewById<Button>(R.id.rollbutton).setOnClickListener {
                 (requireActivity() as ButtonInterface).buttonClicked()
             }
         }
@@ -26,3 +27,9 @@ class ButtonFragment : Fragment() {
     }
 
 }
+
+
+
+
+
+
